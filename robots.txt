@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jacques-does-science.github.io/CLARITY/sitemap.xml
+Sitemap: https://microbiomica.github.io/MicroBiomica/sitemap.xml
