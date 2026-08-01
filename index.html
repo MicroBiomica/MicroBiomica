@@ -1098,6 +1098,15 @@
       cursor: pointer;
       transition: transform 0.2s, border-color 0.2s;
     }
+
+    .output-video-embed {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--line-grey);
+      border-radius: 10px;
+      background: #000;
+      display: block;
+    }
     
     .output-figure-img:hover {
       transform: scale(1.03);
@@ -1128,6 +1137,16 @@
       border-radius: 18px;
       padding: 2rem;
       box-shadow: var(--shadow);
+    }
+
+    .opportunity-list {
+      margin: 1rem 0 0;
+      padding-left: 1.2rem;
+      color: var(--slate);
+    }
+
+    .opportunity-list li {
+      margin: .45rem 0;
     }
     
     .policy-stats {
@@ -1176,6 +1195,7 @@
         <a href="#research">Research</a>
         <a href="#people">People</a>
         <a href="#outputs">Outputs</a>
+        <a href="#opportunities">Join the Lab</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -1484,9 +1504,9 @@
         <div class="intro">
           <p class="eyebrow">Selected Outputs</p>
           <h2>Curated publications and project outputs</h2>
-          <p class="lead">This section highlights selected publications, educational resources and research outputs from
-            the lab. A small curated set will be added here, with links to maintained external profiles for a complete
-            publication record.</p>
+          <p class="lead">This section highlights selected publications, educational resources, commentary and public
+            engagement outputs from the lab. A small curated set will be added here, with links to maintained external
+            profiles for a complete publication record.</p>
         </div>
         <div class="outputs-tabs">
           <button class="tab-btn active" data-tab="food-systems" type="button">Microbiome & Food Systems</button>
@@ -1687,6 +1707,26 @@
         <div class="tab-panel" id="commentary-outreach">
           <div class="output-item has-figures">
             <div>
+              <div class="output-meta">UCD Institute of Food and Health, 22 September 2025</div>
+              <h4 class="output-item-title">Balancing Bugs: The Role of Good and Bad Microbes in Our Food</h4>
+              <p class="output-item-desc">Public lecture with Prof Shea Fanning on the role of beneficial and harmful
+                microbes in food systems, food safety and health.</p>
+            </div>
+            <div class="output-figures">
+              <iframe class="output-video-embed" src="https://www.youtube-nocookie.com/embed/AfvIG-ovmMw"
+                title="Balancing Bugs: The Role of Good and Bad Microbes in Our Food" loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="output-footer">
+              <span class="doi-badge">Talks &amp; Public Engagement</span>
+              <a href="https://www.youtube.com/watch?v=AfvIG-ovmMw" target="_blank" rel="noopener"
+                class="btn-doi">Watch on YouTube</a>
+            </div>
+          </div>
+
+          <div class="output-item has-figures">
+            <div>
               <div class="output-meta">Blog, Microbiology Society, 2026</div>
               <h4 class="output-item-title">Where do we belong? EDI reflections at Annual Conference 2026</h4>
               <p class="output-item-desc">A blog reflection on the EDI session at Annual Conference 2026, co-authored with colleagues and published by the Microbiology Society.</p>
@@ -1707,7 +1747,7 @@
               <p class="output-item-desc">A UCD news item highlighting the HEA's recognition of two UCD teaching and learning projects, including FAIR Game led by Guerrino Macori.</p>
             </div>
             <div class="output-footer">
-              <span class="doi-badge">Commentary &amp; Outreach</span>
+              <span class="doi-badge">Selected Media</span>
               <a href="https://www.ucd.ie/newsandopinion/news/2026/january/14/heanamestwoucdprojectsaswinnersof2025satleimpactawards/" target="_blank" rel="noopener" class="btn-doi">Read Article</a>
             </div>
           </div>
@@ -1747,6 +1787,57 @@
             </div>
             <p style="margin-top: 1.5rem; margin-bottom: 0; font-size: 0.9rem; color: var(--slate); font-style: italic;">Note: 36 of the citing documents were subsequently cited 513 times across a further 367 policy documents, indicating sustained adoption in food safety, antimicrobial resistance, genomic surveillance, and pandemic preparedness guidelines.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="opportunities">
+      <div class="container">
+        <div class="intro">
+          <p class="eyebrow">Join the Lab</p>
+          <h2>PhD opportunities and funding support</h2>
+          <p class="lead">MicroBiomica Lab welcomes students and early-career researchers working across microbiology,
+            genomics, bioinformatics and One Health. We are happy to support competitive applications for funded PhDs,
+            postdoctoral fellowships and visiting scientist placements.</p>
+        </div>
+        <div class="cards two">
+          <article class="card pillar" style="--accent: var(--bio-teal);">
+            <p class="role">Featured PhD Opportunity</p>
+            <h3>Fully Funded PhD in Antimicrobial Resistance, Environmental Metagenomics and Microbial Dark Matter</h3>
+            <p>This project, part of the ADDRESS programme, investigates how antimicrobial resistance emerges, evolves
+              and spreads across farms, food systems, wildlife, wastewater and other interconnected One Health
+              environments.</p>
+            <ul class="opportunity-list">
+              <li>Microbiology, genomics, long-read sequencing, bioinformatics and AI</li>
+              <li>Large-scale genomic and metagenomic data analysis</li>
+              <li>Training in One Health, microbial ecology and computational methods</li>
+              <li>Tax-free stipend, full tuition and access to advanced sequencing and HPC</li>
+            </ul>
+            <div class="repo-links">
+              <p>Learn more</p>
+              <a href="https://euraxess.ec.europa.eu/jobs/443103" target="_blank" rel="noopener">EURAXESS
+                listing</a>
+              <a href="mailto:guerrino.macori@ucd.ie">Email Guerrino</a>
+            </div>
+          </article>
+
+          <article class="card pillar" style="--accent: var(--culture-green);">
+            <p class="role">Funding & Mentorship</p>
+            <h3>Support for PhD, Postdoc and visiting scientist applications</h3>
+            <p>We are happy to supervise and mentor early-career researchers, and to support applications for
+              scholarships and mobility funding such as Erasmus+ visitor scientist placements, Marie Skłodowska-Curie
+              actions and Research Ireland fellowships.</p>
+            <ul class="opportunity-list">
+              <li>PhD studentships and scholarship applications</li>
+              <li>Postdoctoral fellowship applications</li>
+              <li>Visiting scientist opportunities through Erasmus+</li>
+              <li>Collaborative projects and training visits</li>
+            </ul>
+            <div class="repo-links">
+              <p>Get in touch</p>
+              <a href="#contact">Discuss an application</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
