@@ -1088,8 +1088,11 @@
     
     .output-figure-img {
       width: 100%;
-      height: 130px;
-      object-fit: cover;
+      height: 190px;
+      object-fit: contain;
+      background: #f8fbfb;
+      padding: 0.35rem;
+      box-sizing: border-box;
       border-radius: 10px;
       border: 1px solid var(--line-grey);
       cursor: pointer;
@@ -1113,7 +1116,7 @@
         grid-template-columns: 1fr 1fr;
       }
       .output-figure-img {
-        height: 180px;
+        height: 220px;
       }
     }
 
