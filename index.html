@@ -1034,6 +1034,7 @@
       gap: 0.75rem;
       border-top: 1px solid var(--pale-grey);
       padding-top: 0.75rem;
+      grid-column: 1 / -1;
     }
     
     .doi-badge {
@@ -1067,6 +1068,55 @@
       background: #006866;
     }
     
+    /* Output Item Card with Figures */
+    .output-item.has-figures {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 1.5rem;
+    }
+    
+    .output-figures {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      align-content: start;
+    }
+    
+    .output-figures.double {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .output-figure-img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--line-grey);
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    
+    .output-figure-img:hover {
+      transform: scale(1.03);
+      border-color: var(--bio-teal);
+    }
+    
+    @media (max-width: 768px) {
+      .output-item.has-figures {
+        grid-template-columns: 1fr;
+      }
+      .output-figures {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
+      .output-figures.double {
+        grid-template-columns: 1fr 1fr;
+      }
+      .output-figure-img {
+        height: 180px;
+      }
+    }
+
     /* Policy Section Specific */
     .policy-card {
       background: linear-gradient(135deg, var(--white), var(--lab-mist));
@@ -1445,11 +1495,14 @@
 
         <!-- 1. Microbiome & Food Systems Panel -->
         <div class="tab-panel active" id="food-systems">
-          <div class="output-item">
+          <div class="output-item has-figures">
             <div>
               <div class="output-meta">Food Research International, 2026</div>
               <h4 class="output-item-title">Mapping spoilage microbiota in complex food systems: organisms, mechanisms, and omics-based characterisation</h4>
               <p class="output-item-desc">A comprehensive overview of food-spoilage microorganisms and the genomic, metagenomic and multi-omics approaches used to investigate them.</p>
+            </div>
+            <div class="output-figures">
+              <img src="assets/gallery/foodres2026_fig.jpg" class="output-figure-img gallery-item" loading="lazy" alt="Mapping spoilage microbiota in complex food systems workflow">
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.1016/j.foodres.2026.119633</span>
@@ -1457,11 +1510,14 @@
             </div>
           </div>
           
-          <div class="output-item">
+          <div class="output-item has-figures">
             <div>
               <div class="output-meta">Nature Food, 2020</div>
               <h4 class="output-item-title">Meta-analysis of cheese microbiomes highlights contributions to multiple aspects of quality</h4>
               <p class="output-item-desc">A large-scale analysis showing how cheese-associated microbial communities influence product quality, sensory characteristics and safety.</p>
+            </div>
+            <div class="output-figures">
+              <img src="assets/gallery/MAG_workflow.png" class="output-figure-img gallery-item" loading="lazy" alt="Metagenome-Assembled Genome (MAG) reconstruction workflow">
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.1038/s43016-020-0129-3</span>
@@ -1469,26 +1525,48 @@
             </div>
           </div>
 
-          <div class="output-item">
+          <div class="output-item has-figures">
             <div>
               <div class="output-meta">mSystems, 2020</div>
               <h4 class="output-item-title">Fermented-food metagenomics reveals substrate-associated differences in taxonomy, health-associated traits and antimicrobial-resistance determinants</h4>
               <p class="output-item-desc">A metagenomic investigation of fermented foods linking microbial community composition with substrate type, functional traits and antimicrobial-resistance genes.</p>
+            </div>
+            <div class="output-figures">
+              <img src="assets/gallery/multiomics.png" class="output-figure-img gallery-item" loading="lazy" alt="Metagenomics and multi-omics differences in taxonomy and AMR genes">
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.1128/mSystems.00522-20</span>
               <a href="https://doi.org/10.1128/mSystems.00522-20" target="_blank" rel="noopener" class="btn-doi">View Publication</a>
             </div>
           </div>
+
+          <div class="output-item has-figures">
+            <div>
+              <div class="output-meta">Current Opinion in Biotechnology, 2018</div>
+              <h4 class="output-item-title">Novel insights into the microbiology of fermented dairy foods</h4>
+              <p class="output-item-desc">A comprehensive review detailing how high-throughput sequencing technologies and multi-omics are providing novel insights into the complex microbial ecosystems of fermented dairy products, their dynamics, and their contributions to flavor and quality.</p>
+            </div>
+            <div class="output-figures double">
+              <img src="assets/gallery/farm.jpg" class="output-figure-img gallery-item" loading="lazy" alt="Dairy farm environment context">
+              <img src="assets/gallery/dairy_fermentation.png" class="output-figure-img gallery-item" loading="lazy" alt="Dairy fermentation analysis process">
+            </div>
+            <div class="output-footer">
+              <span class="doi-badge">DOI: 10.1016/j.copbio.2017.09.002</span>
+              <a href="https://doi.org/10.1016/j.copbio.2017.09.002" target="_blank" rel="noopener" class="btn-doi">View Publication</a>
+            </div>
+          </div>
         </div>
 
         <!-- 2. Pathogen Genomics & AMR Panel -->
         <div class="tab-panel" id="pathogen-genomics">
-          <div class="output-item">
+          <div class="output-item has-figures">
             <div>
               <div class="output-meta">Antibiotics, 2021</div>
               <h4 class="output-item-title">Characterisation of an early mcr-1 resistance gene and plasmidome in pathogenic Escherichia coli under colistin selection</h4>
               <p class="output-item-desc">A genomic study examining colistin resistance, plasmid diversity and the distribution of the mcr-1 gene across pathogenic E. coli lineages.</p>
+            </div>
+            <div class="output-figures">
+              <img src="assets/gallery/resistance.png" class="output-figure-img gallery-item" loading="lazy" alt="Colistin resistance mcr-1 gene and plasmid distribution">
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.3390/antibiotics10091041</span>
