@@ -29,18 +29,18 @@
       font-weight="700"
       fill="#123c43"
       letter-spacing="-1.5">MicroBiomica</text>
-    <text x="2" y="64"
+    <text x="2" y="40"
       font-family="Helvetica, 'Helvetica Neue', Arial, sans-serif"
       font-size="44"
       font-weight="400"
       fill="#007c7a"
-      letter-spacing="6">LAB</text>
+      letter-spacing="6">Lab</text>
     <rect x="2" y="84" width="360" height="4" rx="2" fill="#79b76d"/>
     <text x="0" y="132"
       font-family="Helvetica, 'Helvetica Neue', Arial, sans-serif"
       font-size="24"
       font-weight="400"
       fill="#50676e"
-      letter-spacing="2.2">MICROBIOLOGY  •  MULTI-OMICS  •  BIOINFORMATICS</text>
+      letter-spacing="2.2">Microbiology•Multiomics•Bioinformatics</text>
   </g>
 </svg>
