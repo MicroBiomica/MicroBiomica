@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">UCD SATLE Impact Awards thumbnail</title>
+  <desc id="desc">Branded thumbnail for the UCD News article on SATLE Impact Awards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4faf8"/>
+      <stop offset="100%" stop-color="#dff1ee"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#007c7a"/>
+      <stop offset="100%" stop-color="#79b76d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+  <circle cx="1015" cy="125" r="150" fill="#007c7a" opacity=".12"/>
+  <circle cx="1080" cy="520" r="210" fill="#79b76d" opacity=".15"/>
+  <rect x="72" y="68" width="214" height="56" rx="28" fill="#123c43"/>
+  <text x="178" y="105" font-family="Arial, Helvetica, sans-serif" font-size="28" text-anchor="middle" fill="#ffffff" font-weight="700">UCD News</text>
+  <rect x="72" y="164" width="396" height="16" rx="8" fill="#007c7a" opacity=".5"/>
+  <text x="72" y="266" font-family="Arial, Helvetica, sans-serif" font-size="34" fill="#50676e" font-weight="700">Public recognition</text>
+  <text x="72" y="344" font-family="Arial, Helvetica, sans-serif" font-size="74" fill="#123c43" font-weight="800">SATLE</text>
+  <text x="72" y="424" font-family="Arial, Helvetica, sans-serif" font-size="60" fill="#123c43" font-weight="800">Impact Awards</text>
+  <text x="72" y="492" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#50676e">FAIR Game and UCD teaching innovation</text>
+  <g transform="translate(803 196)">
+    <rect x="0" y="0" width="250" height="250" rx="34" fill="#ffffff" opacity=".72" stroke="#dde8e6"/>
+    <circle cx="125" cy="100" r="52" fill="url(#accent)"/>
+    <path d="M125 62l11 28 30 2-23 18 8 29-26-16-26 16 8-29-23-18 30-2z" fill="#ffffff" opacity=".9"/>
+    <rect x="52" y="175" width="146" height="20" rx="10" fill="#007c7a" opacity=".75"/>
+    <rect x="70" y="208" width="110" height="12" rx="6" fill="#79b76d" opacity=".65"/>
+  </g>
+</svg>

@@ -1107,6 +1107,14 @@
       background: #000;
       display: block;
     }
+
+    .media-thumb {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--line-grey);
+      display: block;
+      background: var(--white);
+    }
     
     .output-figure-img:hover {
       transform: scale(1.03);
@@ -1137,6 +1145,57 @@
       border-radius: 18px;
       padding: 2rem;
       box-shadow: var(--shadow);
+    }
+
+    .opportunity-banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, rgba(0, 124, 122, .08), rgba(76, 143, 216, .08));
+      border: 1px solid rgba(0, 124, 122, .22);
+      border-left: 5px solid var(--bio-teal);
+      border-radius: 16px;
+      padding: 1rem 1.1rem;
+      margin: 1.5rem 0 1.2rem;
+      color: var(--deep-marine);
+    }
+
+    .opportunity-banner strong {
+      color: var(--deep-marine);
+    }
+
+    .opportunity-banner a {
+      color: var(--bio-teal);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .featured-opportunity {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, rgba(0, 124, 122, .08), rgba(121, 183, 109, .12));
+      border: 1px solid rgba(0, 124, 122, .2);
+      box-shadow: 0 16px 34px rgba(18, 60, 67, .09);
+    }
+
+    .featured-opportunity h3 {
+      font-size: clamp(1.5rem, 2vw, 1.95rem);
+    }
+
+    .recruitment-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .35rem .65rem;
+      border-radius: 999px;
+      background: rgba(0, 124, 122, .12);
+      color: var(--bio-teal);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: .85rem;
     }
 
     .opportunity-list {
@@ -1195,6 +1254,7 @@
         <a href="#research">Research</a>
         <a href="#people">People</a>
         <a href="#outputs">Outputs</a>
+        <a href="#media">Selected Media</a>
         <a href="#opportunities">Join the Lab</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
@@ -1216,7 +1276,8 @@
             communities easier to detect, interpret and act on.</p>
           <div class="buttons">
             <a class="button primary" href="#research">Explore our research</a>
-            <a class="button secondary" href="#contact">Contact the lab</a>
+            <a class="button secondary" href="#opportunities">Join the lab</a>
+            <a class="button subtle" href="#contact">Contact the lab</a>
           </div>
         </div>
         <div class="hero-card">
@@ -1743,18 +1804,6 @@
 
           <div class="output-item">
             <div>
-              <div class="output-meta">UCD News, 14 January 2026</div>
-              <h4 class="output-item-title">HEA names two UCD projects as winners of 2025 SATLE Impact Awards</h4>
-              <p class="output-item-desc">A UCD news item highlighting the HEA's recognition of two UCD teaching and learning projects, including FAIR Game led by Guerrino Macori.</p>
-            </div>
-            <div class="output-footer">
-              <span class="doi-badge">Selected Media</span>
-              <a href="https://www.ucd.ie/newsandopinion/news/2026/january/14/heanamestwoucdprojectsaswinnersof2025satleimpactawards/" target="_blank" rel="noopener" class="btn-doi">Read Article</a>
-            </div>
-          </div>
-
-          <div class="output-item">
-            <div>
               <div class="output-meta">Blog, Microbiology Society, 07 June 2024</div>
               <h4 class="output-item-title">Pride Month: Guerrino Macori</h4>
               <p class="output-item-desc">A Pride Month profile from the Microbiology Society highlighting Guerrino Macori's experiences and reflections as an openly LGBTQIA+ academic.</p>
@@ -1766,7 +1815,7 @@
           </div>
         </div>
 
-        <!-- 6. Policy & Societal Impact Panel -->
+        <!-- 7. Policy & Societal Impact Panel -->
         <div class="tab-panel" id="policy-impact">
           <div class="policy-card">
             <h4 class="output-item-title" style="margin-top:0;">Research informing policy and evidence-based decision-making</h4>
@@ -1792,18 +1841,72 @@
       </div>
     </section>
 
+    <section class="section" id="media">
+      <div class="container">
+        <div class="intro">
+          <p class="eyebrow">Selected Media</p>
+          <h2>Press coverage and public mentions</h2>
+          <p class="lead">Selected media coverage that highlights the lab's teaching, research and public-facing
+            work.</p>
+        </div>
+        <div class="cards two">
+          <article class="output-item has-figures">
+            <div>
+              <div class="output-meta">UCD News, 14 January 2026</div>
+              <h4 class="output-item-title">HEA names two UCD projects as winners of 2025 SATLE Impact Awards</h4>
+              <p class="output-item-desc">UCD coverage of the HEA recognition of two UCD teaching and learning
+                projects, including FAIR Game led by Guerrino Macori.</p>
+            </div>
+            <div class="output-figures">
+              <img src="assets/gallery/media_ucd_satle.svg" class="media-thumb" loading="lazy"
+                alt="Branded thumbnail for the UCD SATLE impact awards news item">
+            </div>
+            <div class="output-footer">
+              <span class="doi-badge">Selected Media</span>
+              <a href="https://www.ucd.ie/newsandopinion/news/2026/january/14/heanamestwoucdprojectsaswinnersof2025satleimpactawards/"
+                target="_blank" rel="noopener" class="btn-doi">Read Article</a>
+            </div>
+          </article>
+
+          <article class="output-item has-figures">
+            <div>
+              <div class="output-meta">UCD News, 24 September 2020</div>
+              <h4 class="output-item-title">Greater transparency over COVID-19 restrictions needed to encourage
+                buy-in from young people, Oireachtas committee hears</h4>
+              <p class="output-item-desc">UCD coverage relevant to your genomic surveillance and public health
+                work, including SARS-CoV-2 sequencing and hospital transmission analysis.</p>
+            </div>
+            <div class="output-figures">
+              <img src="assets/gallery/media_ucd_covid.svg" class="media-thumb" loading="lazy"
+                alt="Branded thumbnail for the UCD COVID-19 public health news item">
+            </div>
+            <div class="output-footer">
+              <span class="doi-badge">Selected Media</span>
+              <a href="https://www.ucd.ie/newsandopinion/news/2020/september/24/greatertransparencyovercovid-19restrictionsneededtoencouragebuy-infromyoungpeopleoireachtascommitteehears/"
+                target="_blank" rel="noopener" class="btn-doi">Read Article</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section alt" id="opportunities">
       <div class="container">
         <div class="intro">
-          <p class="eyebrow">Join the Lab</p>
+          <p class="eyebrow">Now Recruiting</p>
           <h2>PhD opportunities and funding support</h2>
           <p class="lead">MicroBiomica Lab welcomes students and early-career researchers working across microbiology,
             genomics, bioinformatics and One Health. We are happy to support competitive applications for funded PhDs,
             postdoctoral fellowships and visiting scientist placements.</p>
         </div>
+        <div class="opportunity-banner">
+          <div><strong>Now recruiting:</strong> fully funded PhD in antimicrobial resistance, environmental
+            metagenomics and microbial dark matter.</div>
+          <a href="https://euraxess.ec.europa.eu/jobs/443103" target="_blank" rel="noopener">Apply via EURAXESS</a>
+        </div>
         <div class="cards two">
-          <article class="card pillar" style="--accent: var(--bio-teal);">
-            <p class="role">Featured PhD Opportunity</p>
+          <article class="card pillar featured-opportunity" style="--accent: var(--bio-teal);">
+            <div class="recruitment-pill">Featured PhD Opportunity</div>
             <h3>Fully Funded PhD in Antimicrobial Resistance, Environmental Metagenomics and Microbial Dark Matter</h3>
             <p>This project, part of the ADDRESS programme, investigates how antimicrobial resistance emerges, evolves
               and spreads across farms, food systems, wildlife, wastewater and other interconnected One Health
