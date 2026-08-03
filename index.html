@@ -681,6 +681,117 @@
       align-items: start;
     }
 
+    .alumni-flip-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .alumni-flip-card {
+      perspective: 1200px;
+      min-height: 320px;
+    }
+
+    .alumni-flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      transition: transform .6s ease;
+      transform-style: preserve-3d;
+    }
+
+    .alumni-flip-card:hover .alumni-flip-card-inner,
+    .alumni-flip-card:focus-within .alumni-flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .alumni-flip-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      border: 1px solid var(--line-grey);
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .alumni-flip-front {
+      display: grid;
+      grid-template-rows: 1fr auto;
+    }
+
+    .alumni-flip-front img {
+      width: 100%;
+      height: 100%;
+      min-height: 250px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .alumni-overlay {
+      padding: .85rem 1rem 1rem;
+      background: linear-gradient(180deg, rgba(255,255,255,.86), rgba(244,250,248,.98));
+      border-top: 1px solid var(--line-grey);
+    }
+
+    .alumni-overlay .name {
+      margin: 0;
+      color: var(--deep-marine);
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    .alumni-overlay .meta {
+      margin: .15rem 0 0;
+      color: var(--bio-teal);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .alumni-flip-back {
+      transform: rotateY(180deg);
+      padding: 1.15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(0, 124, 122, .08), transparent 10rem),
+        radial-gradient(circle at 80% 80%, rgba(121, 183, 109, .10), transparent 10rem),
+        var(--white);
+    }
+
+    .alumni-flip-back h4 {
+      margin: 0 0 .4rem;
+      color: var(--deep-marine);
+      font-size: 1.1rem;
+    }
+
+    .alumni-flip-back p {
+      margin: 0;
+      color: var(--slate);
+      font-size: .95rem;
+    }
+
+    .alumni-quote {
+      margin-top: .9rem;
+      padding-top: .9rem;
+      border-top: 1px solid var(--line-grey);
+      font-style: italic;
+      color: var(--ink);
+      font-size: .94rem;
+      line-height: 1.6;
+    }
+
+    .alumni-hint {
+      margin: .9rem 0 0;
+      color: var(--slate);
+      font-size: .88rem;
+    }
+
     .alumni-entry {
       border-top: 1px solid var(--line-grey);
       padding-top: 1rem;
@@ -855,7 +966,8 @@
       .cards.two,
       .cards.three,
       .cards.four,
-      .gallery-grid {
+      .gallery-grid,
+      .alumni-flip-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1555,12 +1667,58 @@
           email.</p>
         <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line-grey);">
           <span class="eyebrow" style="font-size: 0.8rem; margin-bottom: 0.5rem; display: block;">Alumni</span>
-          <strong style="color: var(--deep-marine); display: block; margin-bottom: 0.25rem; font-size: 1.05rem;">Alumni
-            profiles coming soon</strong>
-          <p style="margin: 0; color: var(--slate); font-size: 0.95rem;">Former MicroBiomica Lab members have
-            contributed to
-            research and training across microbiology, bioinformatics, food safety and One Health. Profiles are
-            currently being compiled and will be added once details are confirmed.</p>
+          <strong style="color: var(--deep-marine); display: block; margin-bottom: 0.25rem; font-size: 1.05rem;">Former
+            MicroBiomica Lab members</strong>
+          <p style="margin: 0; color: var(--slate); font-size: 0.95rem;">A few short alumni spotlights give a quick
+            sense of the people who have trained in the lab and where their experience has taken them next.</p>
+          <div class="alumni-flip-grid">
+            <article class="alumni-flip-card" tabindex="0" aria-label="Alumni spotlight for Katia Nguyen Petrosky">
+              <div class="alumni-flip-card-inner">
+                <div class="alumni-flip-face alumni-flip-front">
+                  <img src="assets/gallery/katia_petrosky.jpeg" alt="Katia Nguyen Petrosky" loading="lazy">
+                  <div class="alumni-overlay">
+                    <p class="name">Katia Nguyen Petrosky</p>
+                    <p class="meta">Visiting Student, Summer 2024</p>
+                  </div>
+                </div>
+                <div class="alumni-flip-face alumni-flip-back">
+                  <div>
+                    <h4>Arcadia Programme, SCI30050</h4>
+                    <p>Katia explored probiotic bacteria in water kefir using culture-based and sequencing methods,
+                      learning culturing, DNA extraction, and full-length 16S rRNA sequencing while also writing a
+                      literature review and final poster.</p>
+                    <p class="alumni-quote">"My time in Dr. Macori's lab enhanced me as a scientist and gave me the
+                      skill set that helped me pursue my PhD in food science at the University of Illinois,
+                      Urbana-Champaign."</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="alumni-flip-card" tabindex="0" aria-label="Alumni spotlight for Rayna Antova">
+              <div class="alumni-flip-card-inner">
+                <div class="alumni-flip-face alumni-flip-front">
+                  <img src="assets/gallery/rayna_antova.jpeg" alt="Rayna Antova" loading="lazy">
+                  <div class="alumni-overlay">
+                    <p class="name">Rayna Antova</p>
+                    <p class="meta">Taught MSc Thesis</p>
+                  </div>
+                </div>
+                <div class="alumni-flip-face alumni-flip-back">
+                  <div>
+                    <h4>Water kefir microbiome project</h4>
+                    <p>Rayna wrote her thesis on novel sequencing technologies to explore the microbiome of water
+                      kefir, building confidence and independence through close supervision and a structured
+                      experimental workflow.</p>
+                    <p class="alumni-quote">"Working with Dr. Macori was very beneficial for me, as it allowed me to
+                      become more independent and confident in my research skills. I am currently working in a
+                      microbiology lab."</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="alumni-hint">Hover or focus a card to flip and read the short story behind each alumni profile.</p>
         </div>
       </div>
     </section>
