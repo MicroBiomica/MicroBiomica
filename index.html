@@ -544,6 +544,60 @@
       text-align: left;
     }
 
+    .teaching-badges {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0 1.5rem;
+    }
+
+    .badge-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--line-grey);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .92);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .badge-link:hover {
+      transform: translateY(-1px);
+    }
+
+    .badge-link img {
+      width: 104px;
+      height: 104px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .badge-copy {
+      min-width: 0;
+    }
+
+    .badge-copy strong {
+      display: block;
+      margin-bottom: .2rem;
+      color: var(--deep-marine);
+    }
+
+    .badge-copy span {
+      display: block;
+      color: var(--slate);
+      font-size: .95rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 780px) {
+      .teaching-badges {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .repo-links {
       margin-top: 1rem;
       padding-top: .9rem;
@@ -1808,6 +1862,22 @@
           <h2>Module coordination and teaching</h2>
           <p class="lead">Alongside research supervision, Dr Guerrino Macori contributes to undergraduate and graduate
             teaching across microbiology, genomics and environmental biology at UCD.</p>
+        </div>
+        <div class="teaching-badges">
+          <a class="badge-link" href="https://openbadgefactory.com/obv3/credentials/5aca1f94a47725e603898a13d99fc992a687e4f8" target="_blank" rel="noopener">
+            <img src="assets/logos/badge_UDL.png" alt="Universal Design in Teaching and Learning badge" loading="lazy">
+            <div class="badge-copy">
+              <strong>Universal Design in Teaching and Learning</strong>
+              <span>Recognition for inclusive, accessible and learner-centred teaching practice.</span>
+            </div>
+          </a>
+          <a class="badge-link" href="https://openbadgefactory.com/obv3/credentials/6c8dcd5470b851d35aa2cd2ebc15fdc075424ce9" target="_blank" rel="noopener">
+            <img src="assets/logos/badge_teaching.png" alt="UCD Teaching and Learning badge" loading="lazy">
+            <div class="badge-copy">
+              <strong>UCD Teaching and Learning</strong>
+              <span>Recognition for active and collaborative learning in teaching practice.</span>
+            </div>
+          </a>
         </div>
         <div class="cards four">
           <article class="card pillar" style="--accent: var(--bio-teal);">
