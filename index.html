@@ -509,6 +509,74 @@
       line-height: 1.5;
     }
 
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .news-card {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      padding: 1rem 1.05rem 1.1rem;
+      border: 1px solid var(--line-grey);
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: inherit;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .news-card:hover,
+    .news-card:focus-visible {
+      transform: translateY(-2px);
+      border-color: var(--bio-teal);
+      outline: none;
+      box-shadow: 0 14px 32px rgba(18, 60, 67, .10);
+    }
+
+    .news-tag {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--bio-teal) 12%, white);
+      color: var(--bio-teal);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .news-meta {
+      color: var(--slate);
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    .news-card h3 {
+      margin: 0;
+      color: var(--deep-marine);
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+
+    .news-card p {
+      margin: 0;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    .news-link {
+      margin-top: auto;
+      color: var(--bio-teal);
+      font-weight: 800;
+    }
+
     @media (max-width: 780px) {
       .teaching-badges {
         grid-template-columns: 1fr;
@@ -1326,6 +1394,7 @@
         <a href="#people">People</a>
         <a href="#teaching">Teaching</a>
         <a href="#outputs">Outputs</a>
+        <a href="news.html">News</a>
         <a href="#media">Selected Media</a>
         <a href="#opportunities">Join the Lab</a>
         <a href="#gallery">Gallery</a>
@@ -1403,6 +1472,43 @@
           <img src="assets/hero/iceberg.jpg" alt="Iceberg metaphor representing microbial dark matter"
             style="width: 100%; height: auto; border-radius: 20px; display: block; border: 1px solid var(--line-grey);"
             loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="latest-updates">
+      <div class="container">
+        <div class="intro">
+          <p class="eyebrow">Latest Updates</p>
+          <h2>News, blogs and current initiatives</h2>
+          <p class="lead">A quick snapshot of recent lab news, public engagement, and media mentions. See the full
+            news page for the latest stories and archive.</p>
+        </div>
+        <div class="news-grid">
+          <a class="news-card" href="news.html#featured">
+            <span class="news-tag">Featured</span>
+            <span class="news-meta">14 January 2026</span>
+            <h3>HEA names two UCD projects as winners of 2025 SATLE Impact Awards</h3>
+            <p>Recognition for teaching and learning impact, including FAIR Game led by Guerrino Macori.</p>
+            <span class="news-link">Read the story</span>
+          </a>
+          <a class="news-card" href="news.html#balancing-bugs">
+            <span class="news-tag">Talks</span>
+            <span class="news-meta">22 September 2025</span>
+            <h3>Balancing Bugs: The Role of Good and Bad Microbes in Our Food</h3>
+            <p>Public lecture exploring how beneficial and harmful microbes shape food systems and health.</p>
+            <span class="news-link">Watch the talk</span>
+          </a>
+          <a class="news-card" href="news.html#belonging">
+            <span class="news-tag">Blog</span>
+            <span class="news-meta">2026</span>
+            <h3>Where do we belong? EDI reflections at Annual Conference 2026</h3>
+            <p>A blog reflection on belonging, inclusion and the culture of scientific meetings.</p>
+            <span class="news-link">Read the blog</span>
+          </a>
+        </div>
+        <div style="margin-top: 1.1rem;">
+          <a class="button secondary" href="news.html">View all updates</a>
         </div>
       </div>
     </section>

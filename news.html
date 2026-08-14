@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News & Updates | MicroBiomica Lab at UCD</title>
+  <meta name="description"
+    content="News, blog posts, public lectures, and lab updates from MicroBiomica Lab at UCD." />
+  <link rel="icon" type="image/png" href="assets/logos/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logos/logo.png" />
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --lab-mist: #F4FAF8;
+      --bio-teal: #007C7A;
+      --deep-marine: #123C43;
+      --culture-green: #79B76D;
+      --ferment-gold: #F2B84B;
+      --coral: #EF6F61;
+      --genome-blue: #4C8FD8;
+      --ink: #18292E;
+      --slate: #50676E;
+      --line-grey: #DDE8E6;
+      --pale-grey: #F7F9F9;
+      --radius: 18px;
+      --shadow: 0 10px 28px rgba(18, 60, 67, .08);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(121, 183, 109, .10), transparent 30%),
+        radial-gradient(circle at top right, rgba(76, 143, 216, .08), transparent 28%),
+        linear-gradient(180deg, #fbfdfc 0%, #ffffff 24%, #f4faf8 100%);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .skip {
+      position: absolute; left: -999px; top: 12px; z-index: 999;
+      background: var(--white); color: var(--deep-marine);
+      padding: .75rem 1rem; border: 2px solid var(--bio-teal); border-radius: 10px;
+    }
+    .skip:focus { left: 12px; }
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(221, 232, 230, .7);
+    }
+    .header-inner {
+      max-width: var(--max); margin: 0 auto; padding: .9rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .logo-link { display: inline-flex; align-items: center; text-decoration: none; }
+    .logo { width: 224px; max-width: 100%; height: auto; }
+    .nav { display: flex; align-items: center; gap: .2rem; flex-wrap: wrap; }
+    .nav a {
+      display: inline-flex; align-items: center; padding: .8rem .95rem;
+      border-radius: 999px; text-decoration: none; color: var(--deep-marine); font-weight: 700;
+      transition: background .2s ease, color .2s ease;
+    }
+    .nav a:hover, .nav a:focus-visible { background: rgba(0, 124, 122, .08); color: var(--bio-teal); outline: none; }
+    .nav a.primary { background: var(--bio-teal); color: var(--white); }
+    .nav a.primary:hover, .nav a.primary:focus-visible { background: #006965; color: var(--white); }
+    .menu-button { display: none; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+    .hero {
+      padding: 4.4rem 0 2rem;
+    }
+    .eyebrow {
+      margin: 0 0 .7rem; color: var(--bio-teal); text-transform: uppercase; letter-spacing: .14em;
+      font-size: .78rem; font-weight: 800;
+    }
+    h1, h2, h3, h4 { margin-top: 0; line-height: 1.15; color: var(--deep-marine); }
+    h1 { font-size: clamp(2.6rem, 5vw, 4.4rem); margin-bottom: 1rem; }
+    .lead { font-size: 1.08rem; color: var(--slate); max-width: 58rem; margin: 0; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 1.4rem; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      padding: .9rem 1.2rem; border-radius: 999px; text-decoration: none; font-weight: 800;
+      border: 1px solid transparent; transition: transform .2s ease, background .2s ease, color .2s ease;
+    }
+    .button:hover, .button:focus-visible { transform: translateY(-1px); outline: none; }
+    .button.primary { background: var(--bio-teal); color: var(--white); }
+    .button.primary:hover { background: #006965; }
+    .button.secondary { background: rgba(0, 124, 122, .08); color: var(--bio-teal); border-color: rgba(0, 124, 122, .18); }
+    .button.secondary:hover { background: rgba(0, 124, 122, .12); }
+    .button.subtle { background: rgba(76, 143, 216, .08); color: var(--genome-blue); border-color: rgba(76, 143, 216, .18); }
+    .section { padding: 3.75rem 0; }
+    .section.pale { background: rgba(244, 250, 248, .58); }
+    .intro { margin-bottom: 1.4rem; }
+    .intro h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); margin-bottom: .55rem; }
+    .intro .lead { max-width: 54rem; }
+    .feature-card {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 1.25rem;
+      background: rgba(255, 255, 255, .92);
+      border: 1px solid var(--line-grey);
+      border-radius: 28px;
+      padding: 1.15rem;
+      box-shadow: var(--shadow);
+    }
+    .feature-media {
+      border-radius: 22px;
+      border: 1px solid var(--line-grey);
+      background: linear-gradient(135deg, rgba(0, 124, 122, .08), rgba(76, 143, 216, .05));
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 320px;
+    }
+    .feature-media img { width: 100%; height: 100%; object-fit: contain; }
+    .news-pill {
+      display: inline-flex; align-items: center; gap: .35rem;
+      padding: .35rem .75rem; border-radius: 999px;
+      background: color-mix(in srgb, var(--bio-teal) 12%, white);
+      color: var(--bio-teal); font-size: .78rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .news-date { display: block; margin: .75rem 0 .3rem; color: var(--slate); font-size: .92rem; font-weight: 700; }
+    .feature-card h3 { font-size: 1.75rem; margin-bottom: .8rem; }
+    .feature-card p { margin: 0; color: var(--slate); }
+    .feature-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.2rem; }
+    .feature-side {
+      background: linear-gradient(180deg, rgba(244, 250, 248, .82), rgba(255, 255, 255, .96));
+      border: 1px solid var(--line-grey);
+      border-radius: 22px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+    .feature-side h4 { margin-bottom: .1rem; font-size: 1.05rem; }
+    .feature-side ul { margin: 0; padding-left: 1.1rem; color: var(--slate); }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .update-card {
+      display: flex; flex-direction: column; gap: .7rem;
+      background: var(--white); border: 1px solid var(--line-grey); border-radius: 22px;
+      padding: 1rem 1.05rem 1.1rem; box-shadow: var(--shadow); text-decoration: none; color: inherit;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .update-card:hover, .update-card:focus-visible { transform: translateY(-2px); border-color: var(--bio-teal); outline: none; }
+    .update-card h3 { margin: 0; font-size: 1.08rem; line-height: 1.35; }
+    .update-card p { margin: 0; color: var(--slate); }
+    .meta-row { display: flex; justify-content: space-between; gap: .6rem; flex-wrap: wrap; align-items: center; }
+    .tag {
+      display: inline-flex; align-items: center; padding: .32rem .72rem; border-radius: 999px;
+      background: rgba(0, 124, 122, .08); color: var(--bio-teal); font-size: .76rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .update-link { margin-top: auto; color: var(--bio-teal); font-weight: 800; }
+    .archive-list { display: grid; gap: .85rem; }
+    .archive-item {
+      display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center;
+      padding: 1rem 1.1rem; background: rgba(255, 255, 255, .84); border: 1px solid var(--line-grey);
+      border-radius: 18px; box-shadow: var(--shadow);
+    }
+    .archive-item strong { display: block; color: var(--deep-marine); margin-bottom: .12rem; }
+    .archive-item span { color: var(--slate); font-size: .92rem; }
+    .archive-item a { color: var(--bio-teal); font-weight: 800; text-decoration: none; }
+    .callout {
+      background: linear-gradient(135deg, var(--deep-marine), #0f5158);
+      color: var(--white); border-radius: 28px; padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+    }
+    .callout h3 { margin-bottom: .4rem; color: var(--white); }
+    .callout p { margin: 0; color: rgba(255,255,255,.88); max-width: 46rem; }
+    .footer { padding: 2rem 0 3rem; color: var(--slate); font-size: .95rem; }
+    .footer a { color: var(--bio-teal); text-decoration: none; font-weight: 800; }
+    @media (max-width: 980px) {
+      .feature-card { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 780px) {
+      .menu-button { display: inline-flex; align-items: center; justify-content: center; padding: .8rem 1rem; border: 1px solid var(--line-grey); border-radius: 999px; background: var(--white); color: var(--deep-marine); font: inherit; font-weight: 800; }
+      .nav { display: none; position: absolute; left: 1rem; right: 1rem; top: 76px; padding: .75rem; flex-direction: column; align-items: stretch; background: var(--white); border: 1px solid var(--line-grey); border-radius: 16px; box-shadow: var(--shadow); }
+      .nav.open { display: flex; }
+      .nav a { padding: .8rem; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .hero { padding-top: 3rem; }
+      .header-inner { align-items: flex-start; }
+      .logo { width: 210px; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-link" href="index.html" aria-label="MicroBiomica Lab at UCD home">
+        <img class="logo" src="assets/logos/logo.png" alt="MicroBiomica Lab at UCD logo" loading="lazy">
+      </a>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="#featured">Featured</a>
+        <a href="#updates">Updates</a>
+        <a href="#archive">Archive</a>
+        <a class="primary" href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">News & Updates</p>
+        <h1>Recent stories, talks, blogs and lab initiatives.</h1>
+        <p class="lead">A curated feed of lab announcements, public engagement, media mentions and blog posts. Use this
+          page to keep the homepage focused while giving updates a dedicated space to grow.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#featured">Featured story</a>
+          <a class="button secondary" href="#updates">Latest updates</a>
+          <a class="button subtle" href="index.html">Back to homepage</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="intro">
+          <p class="eyebrow">Featured</p>
+          <h2>Most recent highlight</h2>
+          <p class="lead">This featured story can be swapped whenever a major announcement, award, or initiative should
+            take priority on the page.</p>
+        </div>
+        <article class="feature-card">
+          <div class="feature-media">
+            <img src="assets/gallery/media_ucd_satle.svg"
+              alt="UCD SATLE Impact Awards illustration for the featured news item" loading="lazy">
+          </div>
+          <div>
+            <span class="news-pill">Featured story</span>
+            <span class="news-date">14 January 2026</span>
+            <h3>HEA names two UCD projects as winners of 2025 SATLE Impact Awards</h3>
+            <p>UCD recognised the impact of two teaching and learning projects, including FAIR Game led by Guerrino
+              Macori. The piece is a good example of a featured news item that combines recognition, context and a
+              strong visual header.</p>
+            <div class="feature-actions">
+              <a class="button primary"
+                href="https://www.ucd.ie/newsandopinion/news/2026/january/14/heanamestwoucdprojectsaswinnersof2025satleimpactawards/"
+                target="_blank" rel="noopener">Read UCD article</a>
+              <a class="button secondary" href="index.html#latest-updates">See homepage teaser</a>
+            </div>
+          </div>
+          <aside class="feature-side">
+            <div>
+              <h4>Why this page works</h4>
+              <ul>
+                <li>One strong featured item at the top</li>
+                <li>Short cards for recent updates</li>
+                <li>A compact archive for older mentions</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Good swaps for the featured slot</h4>
+              <ul>
+                <li>A new publication or award</li>
+                <li>A major blog post</li>
+                <li>A current lab initiative</li>
+              </ul>
+            </div>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pale" id="updates">
+      <div class="container">
+        <div class="intro">
+          <p class="eyebrow">Latest Updates</p>
+          <h2>Recent news, talks and blog posts</h2>
+          <p class="lead">Three compact cards are usually enough here. They are easy to scan and can link to external
+            news pages, video content or blog posts.</p>
+        </div>
+        <div class="grid-3">
+          <a class="update-card" id="balancing-bugs" href="https://www.youtube.com/watch?v=AfvIG-ovmMw"
+            target="_blank" rel="noopener">
+            <div class="meta-row">
+              <span class="tag">Talks</span>
+              <span class="news-meta">22 September 2025</span>
+            </div>
+            <h3>Balancing Bugs: The Role of Good and Bad Microbes in Our Food</h3>
+            <p>Public lecture on the role of beneficial and harmful microbes in food systems and health.</p>
+            <span class="update-link">Watch on YouTube</span>
+          </a>
+
+          <a class="update-card" id="belonging"
+            href="https://microbiologysociety.org/resource/where-do-we-belong-edi-reflections-at-annual-conference-2026.html"
+            target="_blank" rel="noopener">
+            <div class="meta-row">
+              <span class="tag">Blog</span>
+              <span class="news-meta">2026</span>
+            </div>
+            <h3>Where do we belong? EDI reflections at Annual Conference 2026</h3>
+            <p>A short blog post reflecting on belonging, inclusion and conference culture.</p>
+            <span class="update-link">Read the blog</span>
+          </a>
+
+          <a class="update-card" id="pride"
+            href="https://microbiologysociety.org/resource/pride-month-guerrino-macori.html" target="_blank"
+            rel="noopener">
+            <div class="meta-row">
+              <span class="tag">Profile</span>
+              <span class="news-meta">07 June 2024</span>
+            </div>
+            <h3>Pride Month: Guerrino Macori</h3>
+            <p>A personal profile from the Microbiology Society highlighting experiences and reflections as an openly
+              LGBTQIA+ academic.</p>
+            <span class="update-link">Read profile</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="archive">
+      <div class="container">
+        <div class="intro">
+          <p class="eyebrow">Archive</p>
+          <h2>Older mentions and public-facing items</h2>
+          <p class="lead">This archive can grow over time without taking over the homepage.</p>
+        </div>
+        <div class="archive-list">
+          <div class="archive-item">
+            <div>
+              <strong>Greater transparency over COVID-19 restrictions needed to encourage buy-in from young people, Oireachtas committee hears</strong>
+              <span>UCD News, 24 September 2020. Relevant to genomic surveillance and public-health work.</span>
+            </div>
+            <a href="https://www.ucd.ie/newsandopinion/news/2020/september/24/greatertransparencyovercovid-19restrictionsneededtoencouragebuy-infromyoungpeopleoireachtascommitteehears/"
+              target="_blank" rel="noopener">Read article</a>
+          </div>
+          <div class="archive-item">
+            <div>
+              <strong>Current initiatives</strong>
+              <span>Use this area for new lab announcements, recruitment notices, or funded opportunities.</span>
+            </div>
+            <a href="index.html#opportunities">View opportunities</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="callout">
+          <div>
+            <h3>Have a story, award, or lab update to share?</h3>
+            <p>Send new items through the contact form or add them to the news page as a featured update, short card,
+              or archive entry.</p>
+          </div>
+          <a class="button primary" href="index.html#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p style="margin: 0;">MicroBiomica Lab at UCD. <a href="index.html">Back to homepage</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuButton = document.getElementById("menuButton");
+      const siteNav = document.getElementById("site-nav");
+      if (menuButton && siteNav) {
+        menuButton.addEventListener("click", () => {
+          const open = siteNav.classList.toggle("open");
+          menuButton.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
