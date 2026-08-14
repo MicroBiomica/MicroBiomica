@@ -10,6 +10,10 @@
   <meta name="description"
     content="MicroBiomica Lab at UCD, led by Dr. Guerrino Macori, integrates microbiology, multi-omics, and applied bioinformatics to study complex microbial systems." />
 
+  <link rel="canonical" href="https://microbiomica.github.io/MicroBiomica/" />
+  <link rel="icon" type="image/png" href="assets/logos/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logos/logo.png" />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://microbiomica.github.io/MicroBiomica/" />
@@ -17,6 +21,10 @@
   <meta property="og:description"
     content="MicroBiomica Lab at UCD integrates microbiology, multi-omics and applied bioinformatics to make microbial systems visible, testable and traceable." />
   <meta property="og:site_name" content="MicroBiomica Lab" />
+  <meta property="og:image" content="https://microbiomica.github.io/MicroBiomica/assets/logos/logo.png" />
+  <meta property="og:image:width" content="2134" />
+  <meta property="og:image:height" content="642" />
+  <meta property="og:image:alt" content="MicroBiomica Lab logo" />
 
   <!-- JSON-LD Structured Data for Google Search -->
   <script type="application/ld+json">
@@ -31,6 +39,7 @@
       "name": "Dr. Guerrino Macori",
       "jobTitle": "Assistant Professor",
       "sameAs": [
+        "https://people.ucd.ie/guerrino.macori",
         "https://orcid.org/0000-0001-5835-8409",
         "https://www.linkedin.com/in/guerrinomacori/",
         "https://scholar.google.com/citations?hl=en&user=q7H11coAAAAJ"
@@ -316,99 +325,7 @@
       box-shadow: var(--shadow);
     }
 
-    .placeholder-diagram {
-      min-height: 330px;
-      border-radius: 22px;
-      border: 1px dashed var(--line-grey);
-      background: linear-gradient(135deg, rgba(244, 250, 248, .9), rgba(255, 255, 255, .96));
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      color: var(--slate);
-    }
 
-    .placeholder-diagram.large {
-      min-height: 390px;
-    }
-
-    .placeholder-title {
-      margin: .8rem 0 .2rem;
-      color: var(--deep-marine);
-      font-size: 1.15rem;
-      font-weight: 800;
-    }
-
-    .placeholder-copy {
-      margin: 0;
-      max-width: 28rem;
-      color: var(--slate);
-    }
-
-    .diagram-dots {
-      position: relative;
-      width: 220px;
-      height: 130px;
-    }
-
-    .diagram-dots::before {
-      content: "";
-      position: absolute;
-      left: 20px;
-      right: 20px;
-      top: 65px;
-      border-top: 3px dashed var(--line-grey);
-      transform: rotate(-8deg);
-    }
-
-    .diagram-dots span {
-      position: absolute;
-      display: block;
-      border-radius: 999px;
-      opacity: .82;
-    }
-
-    .diagram-dots span:nth-child(1) {
-      width: 64px;
-      height: 64px;
-      left: 8px;
-      top: 20px;
-      background: #4C8FD8;
-    }
-
-    .diagram-dots span:nth-child(2) {
-      width: 42px;
-      height: 42px;
-      left: 78px;
-      top: 2px;
-      background: #007C7A;
-    }
-
-    .diagram-dots span:nth-child(3) {
-      width: 56px;
-      height: 56px;
-      left: 92px;
-      top: 72px;
-      background: #79B76D;
-    }
-
-    .diagram-dots span:nth-child(4) {
-      width: 46px;
-      height: 46px;
-      left: 158px;
-      top: 28px;
-      background: #F2B84B;
-    }
-
-    .diagram-dots span:nth-child(5) {
-      width: 26px;
-      height: 26px;
-      left: 53px;
-      top: 86px;
-      background: #50676E;
-    }
 
     .support-strip {
       max-width: var(--max);
@@ -637,31 +554,7 @@
       box-shadow: var(--shadow);
     }
 
-    .diagram-flow {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: .6rem;
-    }
 
-    .diagram-flow span {
-      min-width: 9rem;
-      border: 1px solid var(--line-grey);
-      border-radius: 16px;
-      background: var(--white);
-      padding: 1rem 1.1rem;
-      color: var(--deep-marine);
-      font-weight: 800;
-    }
-
-    .diagram-flow b {
-      display: block;
-      width: 54px;
-      height: 3px;
-      background: var(--line-grey);
-    }
 
     .people-grid {
       display: grid;
@@ -674,23 +567,7 @@
       background: var(--pale-grey);
     }
 
-    .portrait-placeholder {
-      height: 230px;
-      border-radius: 20px;
-      border: 1px solid var(--line-grey);
-      background:
-        radial-gradient(circle at 34% 34%, rgba(185, 167, 232, .25), transparent 6rem),
-        radial-gradient(circle at 70% 62%, rgba(0, 124, 122, .18), transparent 7rem),
-        var(--lab-mist);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--slate);
-      font-weight: 700;
-      text-align: center;
-      padding: 1rem;
-      margin-bottom: .9rem;
-    }
+
 
     .portrait-photo {
       width: 100%;
@@ -740,12 +617,7 @@
       color: var(--ink);
     }
 
-    .alumni-card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      align-items: start;
-    }
+
 
     .alumni-flip-grid {
       display: grid;
@@ -865,27 +737,7 @@
       font-size: .88rem;
     }
 
-    .alumni-entry {
-      border-top: 1px solid var(--line-grey);
-      padding-top: 1rem;
-      margin-top: 1rem;
-    }
 
-    .alumni-entry:first-child {
-      border-top: 0;
-      padding-top: 0;
-      margin-top: 0;
-    }
-
-    .alumni-entry p {
-      margin: .2rem 0;
-      color: var(--slate);
-    }
-
-    .output-list {
-      display: grid;
-      gap: 1rem;
-    }
 
     .output {
       display: grid;
@@ -900,35 +752,38 @@
       gap: 1.1rem;
     }
 
+    .gallery-item-btn {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .gallery-item-btn:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item-btn:focus-visible {
+      transform: scale(1.02);
+      outline: 3px solid var(--bio-teal);
+      outline-offset: 4px;
+    }
+
     .gallery-item {
       width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
-      cursor: pointer;
+      display: block;
       border-radius: 20px;
       border: 1px solid var(--line-grey);
-      transition: transform 0.2s ease-in-out;
     }
 
-    .gallery-item:hover,
-    .gallery-item:focus-visible {
-      transform: scale(1.02);
-      outline: none;
-    }
 
-    .gallery-placeholder {
-      min-height: 230px;
-      border-radius: 20px;
-      border: 1px dashed var(--line-grey);
-      background: linear-gradient(135deg, var(--lab-mist), var(--white));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 1.25rem;
-      color: var(--slate);
-      font-weight: 700;
-    }
 
     .footer {
       background: var(--deep-marine);
@@ -984,8 +839,7 @@
       .hero-grid,
       .explainer,
       .people-grid,
-      .footer-grid,
-      .alumni-card {
+      .footer-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1113,7 +967,9 @@
     .lightbox-close:hover,
     .lightbox-close:focus-visible {
       color: var(--bio-teal);
-      outline: none;
+      outline: 2px solid var(--bio-teal);
+      outline-offset: 4px;
+      border-radius: 4px;
     }
 
     /* Outputs Section Tabs */
@@ -1278,6 +1134,36 @@
       grid-template-columns: 1fr 1fr;
     }
 
+    .output-figure-btn {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+
+    .output-figure-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .output-figure-btn:hover .output-figure-img {
+      border-color: var(--bio-teal);
+    }
+
+    .output-figure-btn:focus-visible {
+      transform: scale(1.03);
+      outline: 3px solid var(--bio-teal);
+      outline-offset: 4px;
+    }
+
+    .output-figure-btn:focus-visible .output-figure-img {
+      border-color: var(--bio-teal);
+    }
+
     .output-figure-img {
       width: 100%;
       height: 190px;
@@ -1287,8 +1173,8 @@
       box-sizing: border-box;
       border-radius: 10px;
       border: 1px solid var(--line-grey);
-      cursor: pointer;
-      transition: transform 0.2s, border-color 0.2s;
+      display: block;
+      transition: border-color 0.2s;
     }
 
     .output-video-embed {
@@ -1306,11 +1192,6 @@
       border: 1px solid var(--line-grey);
       display: block;
       background: var(--white);
-    }
-
-    .output-figure-img:hover {
-      transform: scale(1.03);
-      border-color: var(--bio-teal);
     }
 
     @media (max-width: 768px) {
@@ -1342,30 +1223,7 @@
       box-shadow: var(--shadow);
     }
 
-    .opportunity-banner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .75rem;
-      align-items: center;
-      justify-content: space-between;
-      background: linear-gradient(135deg, rgba(0, 124, 122, .08), rgba(76, 143, 216, .08));
-      border: 1px solid rgba(0, 124, 122, .22);
-      border-left: 5px solid var(--bio-teal);
-      border-radius: 16px;
-      padding: 1rem 1.1rem;
-      margin: 1.5rem 0 1.2rem;
-      color: var(--deep-marine);
-    }
 
-    .opportunity-banner strong {
-      color: var(--deep-marine);
-    }
-
-    .opportunity-banner a {
-      color: var(--bio-teal);
-      font-weight: 800;
-      text-decoration: none;
-    }
 
     .featured-opportunity {
       grid-column: 1 / -1;
@@ -1706,7 +1564,7 @@
               <p class="affiliation-line">Tallinn University of Technology, Estonia</p>
               <h3>Atefeh Asadi</h3>
               <p class="thesis">Psychrotrophic bacteria in food spoilage and safety</p>
-              <p>My research focuses on applying advanced sequencing and multi-omics approaches, including full-length
+              <p>Atefeh’s research focuses on applying advanced sequencing and multi-omics approaches, including full-length
                 16S rRNA and ITS sequencing, whole-genome sequencing, and shotgun metagenomics, to investigate microbial
                 succession and the functional adaptation of spoilage-associated microorganisms in ready-to-eat foods.
               </p>
@@ -1717,8 +1575,8 @@
                 <a href="https://scholar.google.com/citations?user=Q0rNIKMAAAAJ&hl=en" target="_blank"
                   rel="noopener">Google Scholar</a>
               </div>
-              <p class="outside"><strong>Outside the lab:</strong> I enjoy cooking and baking so much that, if I had
-                another chance, I would probably become a baker instead of a microbiologist.</p>
+              <p class="outside"><strong>Outside the lab:</strong> Atefeh enjoys cooking and baking so much that, if she had
+                another chance, she would probably become a baker instead of a microbiologist.</p>
             </article>
             <article class="card member">
               <img class="portrait-photo" src="assets/people/Sara.jpg" alt="Portrait of Sara Benetti" loading="lazy">
@@ -1739,7 +1597,7 @@
                 <a href="https://www.researchgate.net/profile/Sara-Benetti-4" target="_blank"
                   rel="noopener">ResearchGate</a>
               </div>
-              <p class="outside"><strong>Outside the lab:</strong> Sara enjoys traveling, good food, live music, and
+              <p class="outside"><strong>Outside the lab:</strong> Sara enjoys travelling, good food, live music, and
                 spending time with her dog, Hubble. Her beloved companion often accompanies her to the office, where he
                 doubles as an unofficial therapy dog, always ready to offer a cuddle to anyone in need.</p>
             </article>
@@ -1840,7 +1698,7 @@
                   <div>
                     <h4>From thesis to PhD</h4>
                     <p>Samuel completed a taught MSc thesis on bacteriophages from campus water sources and later
-                      progressed to a PhD within the SAFEGREEN project at Teagasc under Dr Kaye Burgess, with me as
+                      progressed to a PhD within the SAFEGREEN project at Teagasc under Dr Kaye Burgess, with Dr Guerrino Macori as
                       academic advisor.</p>
                     <p class="alumni-quote">His current PhD examines environmental contamination sources in fresh
                       produce systems, with a focus on Listeria, pathogenic E. coli and Salmonella at the interface of
@@ -1918,9 +1776,7 @@
         <div class="intro">
           <p class="eyebrow">Selected Outputs</p>
           <h2>Curated publications and project outputs</h2>
-          <p class="lead">This section highlights selected publications, educational resources, commentary and public
-            engagement outputs from the lab. A small curated set will be added here, with links to maintained external
-            profiles for a complete publication record.</p>
+          <p class="lead">This section highlights selected publications, educational resources, commentary and public-engagement outputs associated with the lab’s research and teaching. For a complete publication record, see the external researcher profiles linked on the site.</p>
         </div>
         <div class="outputs-tabs">
           <button class="tab-btn active" data-tab="food-systems" type="button">Microbiome & Food Systems</button>
@@ -1942,8 +1798,10 @@
                 metagenomic and multi-omics approaches used to investigate them.</p>
             </div>
             <div class="output-figures">
-              <img src="assets/gallery/foodres2026_fig.jpg" class="output-figure-img gallery-item" loading="lazy"
-                alt="Mapping spoilage microbiota in complex food systems workflow">
+              <button type="button" class="output-figure-btn" aria-label="Open image preview: Mapping spoilage microbiota in complex food systems workflow">
+                <img src="assets/gallery/foodres2026_fig.jpg" class="output-figure-img gallery-item" loading="lazy"
+                  alt="Mapping spoilage microbiota in complex food systems workflow">
+              </button>
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.1016/j.foodres.2026.119633</span>
@@ -1961,8 +1819,10 @@
                 influence product quality, sensory characteristics and safety.</p>
             </div>
             <div class="output-figures">
-              <img src="assets/gallery/farm.jpg" class="output-figure-img gallery-item" loading="lazy"
-                alt="Farm in Ireland">
+              <button type="button" class="output-figure-btn" aria-label="Open image preview: Farm in Ireland">
+                <img src="assets/gallery/farm.jpg" class="output-figure-img gallery-item" loading="lazy"
+                  alt="Farm in Ireland">
+              </button>
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.1038/s43016-020-0129-3</span>
@@ -1980,8 +1840,10 @@
                 composition with substrate type, functional traits and antimicrobial-resistance genes.</p>
             </div>
             <div class="output-figures">
-              <img src="assets/gallery/fermented_foods.png" class="output-figure-img gallery-item" loading="lazy"
-                alt="Fermented foods figures Guerrino">
+              <button type="button" class="output-figure-btn" aria-label="Open image preview: Fermented foods publication figure">
+                <img src="assets/gallery/fermented_foods.png" class="output-figure-img gallery-item" loading="lazy"
+                  alt="Fermented foods publication figure">
+              </button>
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.1128/mSystems.00522-20</span>
@@ -1996,11 +1858,13 @@
               <h4 class="output-item-title">Novel insights into the microbiology of fermented dairy foods</h4>
               <p class="output-item-desc">A comprehensive review detailing how high-throughput sequencing technologies
                 and multi-omics are providing novel insights into the complex microbial ecosystems of fermented dairy
-                products, their dynamics, and their contributions to flavor and quality.</p>
+                products, their dynamics, and their contributions to flavour and quality.</p>
             </div>
             <div class="output-figures double">
-              <img src="assets/gallery/dairy_fermentation.png" class="output-figure-img gallery-item" loading="lazy"
-                alt="Dairy fermentation analysis process - Guerrino">
+              <button type="button" class="output-figure-btn" aria-label="Open image preview: Dairy fermentation analysis process">
+                <img src="assets/gallery/dairy_fermentation.png" class="output-figure-img gallery-item" loading="lazy"
+                  alt="Dairy fermentation analysis process - Guerrino">
+              </button>
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.1016/j.copbio.2017.09.002</span>
@@ -2021,8 +1885,10 @@
                 distribution of the mcr-1 gene across pathogenic E. coli lineages.</p>
             </div>
             <div class="output-figures">
-              <img src="assets/gallery/resistance.png" class="output-figure-img gallery-item" loading="lazy"
-                alt="Colistin resistance mcr-1 gene and plasmid distribution">
+              <button type="button" class="output-figure-btn" aria-label="Open image preview: Colistin resistance mcr-1 gene and plasmid distribution">
+                <img src="assets/gallery/resistance.png" class="output-figure-img gallery-item" loading="lazy"
+                  alt="Colistin resistance mcr-1 gene and plasmid distribution">
+              </button>
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.3390/antibiotics10091041</span>
@@ -2148,11 +2014,13 @@
               <h4 class="output-item-title">Building an inclusive culture at scientific meetings: foundations for future
                 progress</h4>
               <p class="output-item-desc">A publication mapping the design of scientific meetings to build an inclusive
-                culture and create welcoming environments for historically marginalized groups.</p>
+                culture and create welcoming environments for historically marginalised groups.</p>
             </div>
             <div class="output-figures">
-              <img src="assets/gallery/inclusive_conference.png" class="output-figure-img gallery-item" loading="lazy"
-                alt="Sceenshot from the ppt of the paper">
+              <button type="button" class="output-figure-btn" aria-label="Open image preview: Screenshot from presentation on building an inclusive culture at scientific meetings">
+                <img src="assets/gallery/inclusive_conference.png" class="output-figure-img gallery-item" loading="lazy"
+                  alt="Screenshot from presentation on building an inclusive culture at scientific meetings">
+              </button>
             </div>
             <div class="output-footer">
               <span class="doi-badge">DOI: 10.1099/mic.0.001527</span>
@@ -2192,8 +2060,10 @@
                 with colleagues and published by the Microbiology Society.</p>
             </div>
             <div class="output-figures">
-              <img src="assets/gallery/belonging.png" class="output-figure-img gallery-item" loading="lazy"
-                alt="Belonging and EDI reflections graphic for the blog post">
+              <button type="button" class="output-figure-btn" aria-label="Open image preview: Belonging and EDI reflections graphic for the blog post">
+                <img src="assets/gallery/belonging.png" class="output-figure-img gallery-item" loading="lazy"
+                  alt="Belonging and EDI reflections graphic for the blog post">
+              </button>
             </div>
             <div class="output-footer">
               <span class="doi-badge">Commentary &amp; Outreach</span>
@@ -2282,8 +2152,7 @@
               <div class="output-meta">UCD News, 24 September 2020</div>
               <h4 class="output-item-title">Greater transparency over COVID-19 restrictions needed to encourage
                 buy-in from young people, Oireachtas committee hears</h4>
-              <p class="output-item-desc">UCD coverage relevant to your genomic surveillance and public health
-                work, including SARS-CoV-2 sequencing and hospital transmission analysis.</p>
+              <p class="output-item-desc">UCD coverage relating to genomic surveillance and public-health research, including SARS-CoV-2 sequencing and hospital transmission analysis.</p>
             </div>
             <div class="output-figures">
               <img src="assets/gallery/media_ucd_covid.svg" class="media-thumb" loading="lazy"
@@ -2383,43 +2252,85 @@
             collaboration and everyday scientific work.</p>
         </div>
         <div class="gallery-grid">
-          <img src="assets/gallery/Geoffrey_AI.jpeg" class="gallery-item" loading="lazy" alt="Geoffrey">
-          <img src="assets/gallery/guerrino_macori_at_stellenbosch_uni.jpeg" class="gallery-item" loading="lazy"
-            alt="Guerrino Macori at Stellenbosch Uni">
-          <img src="assets/gallery/guerrino_macori_fems.jpeg" class="gallery-item" loading="lazy"
-            alt="Guerrino Macori FEMS">
-          <img src="assets/gallery/guerrino_macori_foodmicro.jpeg" class="gallery-item" loading="lazy"
-            alt="Guerrino Macori FoodMicro">
-          <img src="assets/gallery/guerrino_macori_outreach.jpg" class="gallery-item" loading="lazy"
-            alt="Guerrino Macori Outreach">
-          <img src="assets/gallery/guerrino_macori_sara_benetti_ucd.jpeg" class="gallery-item" loading="lazy"
-            alt="Guerrino Macori, Sara Benetti, UCD">
-          <img src="assets/gallery/2024_lab.jpeg" class="gallery-item" loading="lazy" alt="MicroBiomica Lab in 2024">
-          <img src="assets/gallery/katia_petrosky.jpeg" class="gallery-item" loading="lazy"
-            alt="Katia Petrosky in the lab">
-          <img src="assets/gallery/meabh.jpeg" class="gallery-item" loading="lazy" alt="Meabh in the lab">
-          <img src="assets/gallery/katie.jpeg" class="gallery-item" loading="lazy" alt="Katie in the lab">
-          <img src="assets/gallery/samuel_kenyon.jpeg" class="gallery-item" loading="lazy"
-            alt="Samuel Kenyon in the lab">
-          <img src="assets/gallery/jacques_olivier_athlone_poster.jpg" class="gallery-item" loading="lazy"
-            alt="Jacques Olivier Athlone Poster">
-          <img src="assets/gallery/jacques_olivier_presenting_onehealth.jpeg" class="gallery-item" loading="lazy"
-            alt="Jacques Olivier presenting OneHealth">
-          <img src="assets/gallery/jacques_olivier_una_europa_onehealth.jpeg" class="gallery-item" loading="lazy"
-            alt="Jacques Olivier Una Europa OneHealth">
-          <img src="assets/gallery/jacques_olivier_guerrino_macori_prize.jpeg" class="gallery-item" loading="lazy"
-            alt="Jacques Olivier, Guerrino Macori Prize">
-          <img src="assets/gallery/Katie_wall_phd_graduation_macori_fanning.jpeg" class="gallery-item" loading="lazy"
-            alt="PhD graduation of Dr Katie Wall from the CFS, featuring Guerrino Macori, Jacques Olivier, Mingwei Hong, Professor Seamus Fanning (Katie's supervisor), and Caoimhe Doyle">
-          <img src="assets/gallery/mingwei_hong_athlone_poster.jpg" class="gallery-item" loading="lazy"
-            alt="Mingwei Hong Athlone Poster">
-          <img src="assets/gallery/mingwei_hong_whiteboard.jpeg" class="gallery-item" loading="lazy"
-            alt="Mingwei Hong whiteboard">
-          <img src="assets/gallery/ucd_collegues.jpeg" class="gallery-item" loading="lazy" alt="UCD colleagues">
-          <img src="assets/gallery/unconventional_lab_photo.png" class="gallery-item" loading="lazy"
-            alt="Unconventional lab photo">
-          <img src="assets/gallery/microbiomica_MyGreenLab_sustainability.png" class="gallery-item" loading="lazy"
-            alt="Microbiomica MyGreenLab sustainability">
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Geoffrey">
+            <img src="assets/gallery/Geoffrey_AI.jpeg" class="gallery-item" loading="lazy" alt="Geoffrey">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Guerrino Macori at Stellenbosch University">
+            <img src="assets/gallery/guerrino_macori_at_stellenbosch_uni.jpeg" class="gallery-item" loading="lazy"
+              alt="Guerrino Macori at Stellenbosch Uni">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Guerrino Macori at FEMS conference">
+            <img src="assets/gallery/guerrino_macori_fems.jpeg" class="gallery-item" loading="lazy"
+              alt="Guerrino Macori FEMS">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Guerrino Macori at FoodMicro conference">
+            <img src="assets/gallery/guerrino_macori_foodmicro.jpeg" class="gallery-item" loading="lazy"
+              alt="Guerrino Macori FoodMicro">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Guerrino Macori outreach activity">
+            <img src="assets/gallery/guerrino_macori_outreach.jpg" class="gallery-item" loading="lazy"
+              alt="Guerrino Macori Outreach">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Guerrino Macori and Sara Benetti at UCD">
+            <img src="assets/gallery/guerrino_macori_sara_benetti_ucd.jpeg" class="gallery-item" loading="lazy"
+              alt="Guerrino Macori, Sara Benetti, UCD">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: MicroBiomica Lab group photo in 2024">
+            <img src="assets/gallery/2024_lab.jpeg" class="gallery-item" loading="lazy" alt="MicroBiomica Lab in 2024">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Katia Petrosky working in the lab">
+            <img src="assets/gallery/katia_petrosky.jpeg" class="gallery-item" loading="lazy"
+              alt="Katia Petrosky in the lab">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Meabh working in the lab">
+            <img src="assets/gallery/meabh.jpeg" class="gallery-item" loading="lazy" alt="Meabh in the lab">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Katie working in the lab">
+            <img src="assets/gallery/katie.jpeg" class="gallery-item" loading="lazy" alt="Katie in the lab">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Samuel Kenyon working in the lab">
+            <img src="assets/gallery/samuel_kenyon.jpeg" class="gallery-item" loading="lazy"
+              alt="Samuel Kenyon in the lab">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Jacques Olivier presenting poster in Athlone">
+            <img src="assets/gallery/jacques_olivier_athlone_poster.jpg" class="gallery-item" loading="lazy"
+              alt="Jacques Olivier Athlone Poster">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Jacques Olivier presenting at OneHealth conference">
+            <img src="assets/gallery/jacques_olivier_presenting_onehealth.jpeg" class="gallery-item" loading="lazy"
+              alt="Jacques Olivier presenting OneHealth">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Jacques Olivier at Una Europa OneHealth event">
+            <img src="assets/gallery/jacques_olivier_una_europa_onehealth.jpeg" class="gallery-item" loading="lazy"
+              alt="Jacques Olivier Una Europa OneHealth">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Jacques Olivier and Guerrino Macori receiving prize">
+            <img src="assets/gallery/jacques_olivier_guerrino_macori_prize.jpeg" class="gallery-item" loading="lazy"
+              alt="Jacques Olivier, Guerrino Macori Prize">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: PhD graduation of Dr Katie Wall with lab members and Prof. Seamus Fanning">
+            <img src="assets/gallery/Katie_wall_phd_graduation_macori_fanning.jpeg" class="gallery-item" loading="lazy"
+              alt="PhD graduation of Dr Katie Wall from the CFS, featuring Guerrino Macori, Jacques Olivier, Mingwei Hong, Professor Seamus Fanning (Katie's supervisor), and Caoimhe Doyle">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Mingwei Hong presenting poster in Athlone">
+            <img src="assets/gallery/mingwei_hong_athlone_poster.jpg" class="gallery-item" loading="lazy"
+              alt="Mingwei Hong Athlone Poster">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Mingwei Hong working at the whiteboard">
+            <img src="assets/gallery/mingwei_hong_whiteboard.jpeg" class="gallery-item" loading="lazy"
+              alt="Mingwei Hong whiteboard">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Photo with UCD colleagues">
+            <img src="assets/gallery/ucd_collegues.jpeg" class="gallery-item" loading="lazy" alt="UCD colleagues">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: Unconventional lab photo">
+            <img src="assets/gallery/unconventional_lab_photo.png" class="gallery-item" loading="lazy"
+              alt="Unconventional lab photo">
+          </button>
+          <button type="button" class="gallery-item-btn" aria-label="Open image preview: MicroBiomica MyGreenLab sustainability certification">
+            <img src="assets/gallery/microbiomica_MyGreenLab_sustainability.png" class="gallery-item" loading="lazy"
+              alt="Microbiomica MyGreenLab sustainability">
+          </button>
         </div>
       </div>
     </section>
@@ -2478,7 +2389,7 @@
   <script data-goatcounter="https://clarity.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
   <!-- Lightbox -->
-  <div id="gallery-lightbox" class="lightbox">
+  <div id="gallery-lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
     <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close image preview">&times;</button>
     <img class="lightbox-content" id="lightbox-img" alt="">
   </div>
@@ -2488,30 +2399,68 @@
       const lightbox = document.getElementById("gallery-lightbox");
       const lightboxImg = document.getElementById("lightbox-img");
       const closeBtn = document.getElementById("lightbox-close");
+      let lastFocusedElement = null;
 
-      const galleryImages = document.querySelectorAll(".gallery-item");
+      const openLightbox = (imgSrc, imgAlt, triggerEl) => {
+        lastFocusedElement = triggerEl || document.activeElement;
+        lightboxImg.src = imgSrc;
+        lightboxImg.alt = imgAlt || "";
+        lightbox.classList.add("show");
+        document.body.style.overflow = "hidden";
+        closeBtn.focus();
+      };
 
-      galleryImages.forEach(img => {
-        img.addEventListener("click", () => {
-          lightboxImg.src = img.src;
-          lightboxImg.alt = img.alt || "";
-          lightbox.classList.add("show");
+      const closeLightbox = () => {
+        if (!lightbox.classList.contains("show")) return;
+        lightbox.classList.remove("show");
+        document.body.style.overflow = "";
+        if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+          lastFocusedElement.focus();
+        }
+      };
+
+      const triggers = document.querySelectorAll(".gallery-item-btn, .output-figure-btn");
+
+      triggers.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const img = btn.querySelector("img");
+          if (img) {
+            openLightbox(img.src, img.alt, btn);
+          }
         });
       });
 
-      closeBtn.addEventListener("click", () => {
-        lightbox.classList.remove("show");
-      });
+      closeBtn.addEventListener("click", closeLightbox);
 
       lightbox.addEventListener("click", (e) => {
         if (e.target === lightbox) {
-          lightbox.classList.remove("show");
+          closeLightbox();
         }
       });
 
       document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && lightbox.classList.contains("show")) {
-          lightbox.classList.remove("show");
+        if (!lightbox.classList.contains("show")) return;
+
+        if (e.key === "Escape") {
+          e.preventDefault();
+          closeLightbox();
+        } else if (e.key === "Tab") {
+          const focusables = lightbox.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          if (focusables.length === 0) return;
+          const firstFocusable = focusables[0];
+          const lastFocusable = focusables[focusables.length - 1];
+
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusable) {
+              e.preventDefault();
+              lastFocusable.focus();
+            }
+          } else {
+            if (document.activeElement === lastFocusable) {
+              e.preventDefault();
+              firstFocusable.focus();
+            }
+          }
         }
       });
 
