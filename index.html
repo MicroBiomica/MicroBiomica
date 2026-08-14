@@ -658,8 +658,8 @@
     }
 
     .alumni-flip-front {
-      display: grid;
-      grid-template-rows: 1fr auto;
+      position: relative;
+      display: block;
     }
 
     .alumni-flip-front img {
@@ -678,9 +678,14 @@
     }
 
     .alumni-overlay {
-      padding: .85rem 1rem 1rem;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .86), rgba(244, 250, 248, .98));
-      border-top: 1px solid var(--line-grey);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: .8rem 1rem .9rem;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .82));
+      backdrop-filter: blur(4px);
+      border-top: 1px solid rgba(18, 60, 67, .08);
     }
 
     .alumni-overlay .name {
