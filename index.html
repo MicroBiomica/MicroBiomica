@@ -658,8 +658,8 @@
     }
 
     .alumni-flip-front {
-      display: grid;
-      grid-template-rows: 1fr 4.7rem;
+      position: relative;
+      display: block;
     }
 
     .alumni-flip-front img {
@@ -669,6 +669,8 @@
       object-position: center center;
       background: #f7fbfb;
       display: block;
+      position: relative;
+      z-index: 1;
     }
 
     @media (min-width: 1180px) {
@@ -678,11 +680,16 @@
     }
 
     .alumni-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: .75rem 1rem .85rem;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .84), rgba(244, 250, 248, .98));
+      background: linear-gradient(180deg, rgba(255, 255, 255, .18), rgba(244, 250, 248, .90));
       border-top: 1px solid rgba(18, 60, 67, .08);
     }
 
