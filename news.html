@@ -139,6 +139,13 @@
       flex-direction: column;
       gap: .9rem;
     }
+    .feature-side img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 1px solid var(--line-grey);
+      background: #fff;
+    }
     .feature-side h4 { margin-bottom: .1rem; font-size: 1.05rem; }
     .feature-side ul { margin: 0; padding-left: 1.1rem; color: var(--slate); }
     .grid-3 {
@@ -240,23 +247,33 @@
         </div>
         <article class="feature-card">
           <div class="feature-media">
-            <img src="assets/gallery/media_ucd_satle.svg"
-              alt="UCD SATLE Impact Awards illustration for the featured news item" loading="lazy">
+            <img src="assets/gallery/FairGame.png"
+              alt="Screenshot of the FAIR Game academic integrity scenarios website" loading="lazy">
           </div>
           <div>
-            <span class="news-pill">Featured story</span>
-            <span class="news-date">14 January 2026</span>
-            <h3>HEA names two UCD projects as winners of 2025 SATLE Impact Awards</h3>
-            <p>UCD recognised the impact of two teaching and learning projects, including FAIR Game led by Guerrino
-              Macori.</p>
+            <span class="news-pill">Featured initiative</span>
+            <span class="news-date">August 2026</span>
+            <h3>FAIR Game: academic integrity scenarios and a submission portal</h3>
+            <p>FAIR Game is a UCD-supported teaching resource funded through the National Forum and Higher Education
+              Authority SATLE scheme. The project site includes a sample of academic integrity scenarios, and visitors
+              can also submit a new scenario for review and possible inclusion.</p>
             <div class="feature-actions">
               <a class="button primary"
-                href="https://www.ucd.ie/newsandopinion/news/2026/january/14/heanamestwoucdprojectsaswinnersof2025satleimpactawards/"
-                target="_blank" rel="noopener">Read UCD article</a>
-              <a class="button secondary" href="index.html#latest-updates"> Go back to homepage</a>
+                href="https://macgenomegue.github.io/FAIr_Game/" target="_blank" rel="noopener">Visit FAIR Game</a>
+              <a class="button secondary" href="https://macgenomegue.github.io/FAIr_Game/submit_scenario/"
+                target="_blank" rel="noopener">Submit a scenario</a>
             </div>
           </div>
           <aside class="feature-side">
+            <img src="assets/logos/fairGame_logo.png" alt="FAIR Game logo" loading="lazy">
+            <div>
+              <h4>What you can do on the project site</h4>
+              <ul>
+                <li>Browse a sample of academic integrity scenarios</li>
+                <li>Submit a new scenario through the online form</li>
+                <li>Explore a teaching resource supported by SATLE funding</li>
+              </ul>
+            </div>
           </aside>
         </article>
       </div>
@@ -317,6 +334,14 @@
           <p class="lead">Others news</p>
         </div>
         <div class="archive-list">
+          <div class="archive-item">
+            <div>
+              <strong>HEA names two UCD projects as winners of 2025 SATLE Impact Awards</strong>
+              <span>UCD News, 14 January 2026. Recognition of teaching and learning impact, including FAIR Game.</span>
+            </div>
+            <a href="https://www.ucd.ie/newsandopinion/news/2026/january/14/heanamestwoucdprojectsaswinnersof2025satleimpactawards/"
+              target="_blank" rel="noopener">Read article</a>
+          </div>
           <div class="archive-item">
             <div>
               <strong>Greater transparency over COVID-19 restrictions needed to encourage buy-in from young people, Oireachtas committee hears</strong>
